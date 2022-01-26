@@ -1,0 +1,112 @@
+﻿@model MVCAppointment.Models.Patient
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Patient</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Height)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Height)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RefName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RefName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RefPhoneNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RefPhoneNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RefRelation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RefRelation)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
